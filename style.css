@@ -1,0 +1,225 @@
+@import url(https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ubuntu:wght@300;400;500;700&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'ubuntu', sans-serif;
+}
+
+:root {
+    --black: #2f2f2f;
+    --red: #f83038;
+    --white: #fff;
+
+}
+
+.main {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(#1c1c1c,#323232);
+    padding: 30px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.main::before {
+    content: 'PuroSangue';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16vw;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.25);
+
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {
+    max-width: 80px;
+
+}
+
+.content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    z-index: 1;
+
+}
+
+.content a {
+    text-decoration: none;  /* Remove o sublinhado do link */
+}
+
+.content h2 {
+    font-size: 5em;
+    font-weight: 300;
+    color: var(--white);
+    text-align: center;
+}
+
+.content h2 span {
+    font-weight: 700;
+
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--red);
+    color: var(--white);
+    text-decoration: none;
+    padding: 16px 36px;
+    margin-top: 20px;
+    border-radius: 50px;
+    font-size: 1.25em;
+    transition: 0.25s;
+
+}
+
+.btn:hover {
+    letter-spacing: 1px;
+} 
+
+.mach {
+    max-width: 80%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 100px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* Estilização geral da barra de navegação */
+.navbar {
+    position: fixed; /* Fixa a barra no topo */
+    top: 0; /* Define a posição no topo */
+    left: 0;
+    width: 100%; /* Faz a barra ocupar toda a largura da tela */
+    background-color: #333; /* Cor de fundo (altere conforme necessário) */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para destaque */
+}
+
+/* Estilização da lista de navegação */
+.navigation {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    display: flex; /* Coloca os itens lado a lado */
+    margin: 0; /* Remove margens */
+    padding: 0; /* Remove espaçamento interno */
+}
+
+/* Estilização dos itens da lista */
+.navigation li {
+    margin: 0;
+}
+
+/* Estilização dos links */
+.navigation a {
+    display: block; /* Torna o link clicável em toda a área */
+    padding: 15px 20px; /* Espaçamento interno dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: white; /* Cor do texto */
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+}
+
+/* Estilo ao passar o mouse sobre os links */
+.navigation a:hover {
+    background-color: #555; /* Altere a cor para algo visível no hover */
+}
+
+body {
+    padding-top: 40px; /* Ajuste esse valor conforme a altura da sua barra de navegação */
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column; /* Empilha os itens em telas pequenas */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .navigation a {
+        padding: 10px; /* Ajusta o espaçamento para telas menores */
+    }
+}
+
+
+.logos {
+    width: 100%; /* Faz a barra ocupar toda a largura da tela */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+
+.logo{
+    list-style: none; /* Remove os marcadores padrão da lista */
+    display: flex; /* Coloca os itens lado a lado */
+    padding: 0; /* Remove espaçamento interno */
+}
+
+.logo li{
+    margin: 0;
+}
+
+.logo a{
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);  /* Sombra redonda */
+    border-radius: 15px;  /* Bordas arredondadas */
+    font-size: 2em;  /* Aumenta o tamanho do ícone de fonte */
+    padding: 20px 40px;/* Ajuste o padding para centralizar */
+    display: block; /* Torna o link clicável em toda a área */
+    padding: 20px 40px; /* Espaçamento interno dos links */
+    color: white; /* Cor do texto */
+    transition: background-color 0.3s ease; /* Transição suave para hover */
+}
+
+.logo a:hover { 
+    background-color: #555; /* Altere a cor para algo visível no hover */
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.25);  /* Sombra mais forte no hover */
+}
+
+body {
+    padding-top: 20px; /* Ajuste esse valor conforme a altura da sua barra de navegação */
+}
+
+/* Estilo para a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+    height: 12px; /* Altura da barra de rolagem horizontal (se aplicável) */
+}
+
+/* Estilo para o trilho da barra de rolagem (parte onde o thumb se move) */
+::-webkit-scrollbar-track {
+    background-color: black; /* Cor do trilho */
+}
+
+/* Estilo para o polegar da barra de rolagem (parte que você arrasta) */
+::-webkit-scrollbar-thumb {
+    background-color: darkgray; /* Cor do polegar */
+    border: 3px solid black; /* Cor da borda do polegar */
+}
+
+/* Estilo para o polegar quando está sendo clicado/arrastado */
+::-webkit-scrollbar-thumb:hover {
+    background-color: black; /* Cor do polegar quando em hover */
+}
